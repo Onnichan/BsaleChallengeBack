@@ -8,4 +8,4 @@ module.exports = {
   HOST: process.env.HOST,
   USER: proccess.env.USER,
   PASSWORD: process.env.PASSWORD,
-}
+};
