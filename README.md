@@ -1,6 +1,6 @@
 ## CHALLENGE BSALE
 
-Its a challenge of Bsale, it co
+It's a challenge of Bsale, it co
 This project was developed with the following tools
 
 ### Tools
