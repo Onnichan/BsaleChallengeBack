@@ -5,10 +5,9 @@ This project was developed with the following tools
 
 ### Tools
 
-* Nodejs
-* Sequelize
-* Mysql
-* Postman
+- Nodejs
+- Sequelize
+- Mysql
+- Postman
 
 ### Deploy
-
