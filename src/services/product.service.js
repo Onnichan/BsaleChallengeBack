@@ -1,8 +1,7 @@
-const productRepository = require("../repositories/product.repository")
+const productRepository = require("../repositories/product.repository");
 
 class ProductService {
-  
-  async getAll(){
+  async getAll() {
     const products = await productRepository.getAll();
     return products;
   }

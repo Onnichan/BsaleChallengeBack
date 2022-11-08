@@ -1,7 +1,6 @@
-const categoryService = require("../services/category.service")
+const categoryService = require("../services/category.service");
 class CategoryController {
-  
-  async getAll(req, res){
+  async getAll(req, res) {
     console.log("request");
     const categories = await categoryService.getAll();
     res.send(categories);
