@@ -9,7 +9,8 @@ class CategoryController {
 
   async searchProduct(req, res) {
     const { search } = req.params;
-    console.log(search);
+    const filteredProduct = await productService.searchProduct(search);
+    res.send(filteredProduct);
   }
 }
 

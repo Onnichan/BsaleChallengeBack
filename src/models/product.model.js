@@ -1,5 +1,6 @@
 const { sequelize } = require("../config/connection");
 const { Model, DataTypes } = require("sequelize");
+const categoryModel = require("./category.model");
 
 class ProductModel extends Model {}
 
@@ -24,10 +25,12 @@ ProductModel.init(
     },
     category: {
       type: DataTypes.INTEGER,
-      references: {
-        model: "category",
-        key: "id",
-      },
+      // references: {
+      //   model: "category",
+      //   key: "id",
+      // },
+      // onDelete: "RESTRICT",
+      // onUpdate: "RESTRICT"
     },
   },
   {
@@ -35,6 +38,7 @@ ProductModel.init(
     modelName: "product",
     freezeTableName: true,
     timestamps: false,
+    underscored: true,
   }
 );
 

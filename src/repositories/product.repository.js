@@ -1,4 +1,5 @@
-const { productModel } = require("../models");
+const { Op } = require("sequelize");
+const { productModel, categoryModel } = require("../models");
 
 class ProductRepository {
   async getAll() {
@@ -8,6 +9,17 @@ class ProductRepository {
       limit: 5,
     });
     console.log(products);
+    return products;
+  }
+
+  async searchProduct(search) {
+    const products = await categoryModel.findAndCountAll(
+      { where: { [Op.or]: [{ name: search }] }, include:{ model: productModel, as: "products"} },
+      {
+        offset: 5,
+        limit: 5,
+      }
+    );
     return products;
   }
 }
