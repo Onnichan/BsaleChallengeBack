@@ -14,7 +14,10 @@ class ProductRepository {
 
   async searchProduct(search) {
     const products = await categoryModel.findAndCountAll(
-      { where: { [Op.or]: [{ name: search }] }, include:{ model: productModel, as: "products"} },
+      {
+        where: { [Op.or]: [{ name: search }] },
+        include: { model: productModel, as: "products" },
+      },
       {
         offset: 5,
         limit: 5,

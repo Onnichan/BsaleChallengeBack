@@ -6,7 +6,7 @@ class ProductService {
     return products;
   }
 
-  async searchProduct(search){
+  async searchProduct(search) {
     const filteredProduct = await productRepository.searchProduct(search);
     return filteredProduct;
   }
