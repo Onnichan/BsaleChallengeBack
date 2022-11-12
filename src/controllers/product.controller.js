@@ -1,9 +1,12 @@
 const productService = require("../services/product.service");
 
-class CategoryController {
+class ProductController {
   async getAll(req, res) {
     console.log("request");
-    const products = await productService.getAll();
+    let { offset, limit } = req.query;
+    offset = Number(offset);
+    limit = Number(limit);
+    const products = await productService.getAll(offset, limit);
     res.send(products);
   }
 
@@ -14,4 +17,4 @@ class CategoryController {
   }
 }
 
-module.exports = new CategoryController();
+module.exports = new ProductController();

@@ -2,29 +2,33 @@ const { Op } = require("sequelize");
 const { productModel, categoryModel } = require("../models");
 
 class ProductRepository {
-  async getAll() {
-    console.log("requested products");
+  async getAll(offset, limit) {
     const products = await productModel.findAndCountAll({
-      offset: 5,
-      limit: 5,
+      offset,
+      limit,
     });
     console.log(products);
     return products;
   }
 
   async searchProduct(search) {
-    const products = await categoryModel.findAndCountAll(
-      {
-        where: { [Op.or]: [{ name: search }] },
-        include: { model: productModel, as: "products" },
-      },
-      {
-        offset: 5,
-        limit: 5,
-      }
-    );
+    console.log(search);
+    const products = await productModel.findAndCountAll({
+      where: { [Op.or]: [{ name: search }] },
+      include: [
+        {
+          model: categoryModel,
+          as: "categories",
+          required: true,
+          attributes: ["name"],
+        },
+      ],
+      subQuery: false,
+    });
     return products;
   }
+
+  
 }
 
 module.exports = new ProductRepository();
