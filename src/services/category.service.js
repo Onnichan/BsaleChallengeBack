@@ -6,8 +6,12 @@ class CategoryService {
     return categories;
   }
 
-  async productsByCategory(offset, limit, category){
-    const filteredProduct = await categoryRepository.productsByCategory(offset, limit, category);
+  async productsByCategory(offset, limit, category) {
+    const filteredProduct = await categoryRepository.productsByCategory(
+      offset,
+      limit,
+      category
+    );
     return filteredProduct;
   }
 }

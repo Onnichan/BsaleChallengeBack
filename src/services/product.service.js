@@ -10,8 +10,6 @@ class ProductService {
     const filteredProduct = await productRepository.searchProduct(search);
     return filteredProduct;
   }
-
-  
 }
 
 module.exports = new ProductService();

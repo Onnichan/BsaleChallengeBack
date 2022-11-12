@@ -27,8 +27,6 @@ class ProductRepository {
     });
     return products;
   }
-
-  
 }
 
 module.exports = new ProductRepository();

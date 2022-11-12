@@ -6,6 +6,6 @@ module.exports = function () {
 
   router.get("/", ProductController.getAll);
   router.get("/:search", ProductController.searchProduct);
-  
+
   return router;
 };
