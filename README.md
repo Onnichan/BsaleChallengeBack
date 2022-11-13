@@ -23,7 +23,7 @@ Este proyecto esta estructurado de la siguiente forma:
 
 ### Pasos para correr la aplicación en local
 
-Tiene que crear un archivo .env en la raiz del proyecto, tiene esta estructura 
+Tiene que crear un archivo .env en la raiz del proyecto, tiene esta estructura
 
 ```
 PORT=
@@ -32,8 +32,8 @@ HOST=
 USER=
 PASSWORD=
 ```
-La base de datos ya esta realizada y proveida en este challenge asi que la cuestión es solo conectarse, la base de datos esta alojado en AWS RDS
 
+La base de datos ya esta realizada y proveida en este challenge asi que la cuestión es solo conectarse, la base de datos esta alojado en AWS RDS
 
 Una vez que haya clonado este repositorio deberá instalar las dependencias del proyecto con el siguiente comando:
 
