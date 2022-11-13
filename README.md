@@ -46,6 +46,10 @@ y luego para correr el proyecto en modo de desarrollo
 ```
 yarn dev
 ```
+### Documentación
+
+La documentación que se pide en este challenge sobre los endpoints realizados para los productos y categorias se realizó con ayuda de postman y puede verlo desde [aqui](https://documenter.getpostman.com/view/7100751/2s8YeuKqv4)
+
 
 ### Deploy
 
