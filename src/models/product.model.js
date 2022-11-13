@@ -25,13 +25,6 @@ ProductModel.init(
     },
     category: {
       type: DataTypes.INTEGER,
-      // field: "category"
-      // references: {
-      //   model: "category",
-      //   key: "id",
-      // },
-      // onDelete: "RESTRICT",
-      // onUpdate: "RESTRICT"
     },
   },
   {
