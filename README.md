@@ -14,6 +14,7 @@ Este proyecto esta estructurado de la siguiente forma:
 
 ### Herramientas
 
+- Husky, prettier y eslint
 - Nodejs
 - Sequelize
 - Mysql
